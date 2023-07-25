@@ -4,7 +4,7 @@
 ###################
 
 import pathmagic
-from src.utils import my_operator
+from main import my_operator
 
 
 def main():

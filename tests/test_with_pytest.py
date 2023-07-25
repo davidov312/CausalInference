@@ -3,19 +3,24 @@
 # Date: 2/1/2023
 ###################
 
+from pathlib import Path
+import sys
+sys.path.append(str(Path().resolve()))
+from src.utils import get_hyperparams
 
-import pathmagic
-from src.utils import my_operator
-
-
-def test_my_operator():
-    assert my_operator(2, 3) == 8
-
-
-def main():
-    test_my_operator()
-    print('done')
+global_params: dict = {'hyperparams_path': 'config/hyperparams.yml'}
 
 
-if __name__ == "__main__":
-    main()
+def test_alwayas_true():
+    """
+    Function that should always pass if pytest is configured properly
+    """
+    assert True
+
+def test_hyperparams_loading():
+    """
+    test the loading of hyperparams
+    """
+    hyperparams = get_hyperparams(Path(global_params['hyperparams_path']))
+    pass
+
