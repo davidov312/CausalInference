@@ -11,7 +11,8 @@ from src.utils import get_args, get_hyperparams
 def main():
     args = get_args()
     hyperparams = get_hyperparams(Path('config', args.hyperparams_path))
-    print('done')
+    print(hyperparams.example_param)
+    return
 
 if __name__ == "__main__":
     main()

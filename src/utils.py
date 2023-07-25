@@ -29,7 +29,7 @@ def get_hyperparams(file_path: Path) -> Hyperparams:
     Output - a dictionary that allows hinting
     """
     hyperparams = read_yaml(file_path)
-    # hyperparams = Hyperparams(**hyperparams)
+    hyperparams = Hyperparams(**hyperparams)
     return hyperparams
 
 

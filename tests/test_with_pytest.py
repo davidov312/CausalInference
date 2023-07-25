@@ -19,7 +19,7 @@ def test_alwayas_true():
 
 def test_hyperparams_loading():
     """
-    test the loading of hyperparams
+    test the loading of hyperparams including the use of pydantic for data validation
     """
     hyperparams = get_hyperparams(Path(global_params['hyperparams_path']))
     pass
